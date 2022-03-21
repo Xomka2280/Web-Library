@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Old Standard TT', serif;
+}
+
+
+a:hover, input:hover, button:hover {
+    cursor: pointer;
+    transition-duration: .3s;
+    color: #07f;
+}
+
+body {
+    margin: 0;
+    text-decoration-color: #2B2E4A;
+    background-color: #EEEEEE;
+    overflow: no-display;
+    font-size: 18px;
+    padding: 0 0 50px;
+}
+
+input {
+    outline: none;
+    -moz-appearance: none;
+    border: 1px solid #e8eaed;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px -2px #9098a9;
+    padding: 5px 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.menu-inner, .books-inner, .giveBook-inner, .markBook-inner,
+.recommendBook-inner, .notice-inner, .createBook-inner, .users-inner, .createUser-inner, .recommendations-inner{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-button-a{
+    border: 1px solid black;
+    padding: 2px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.auth-submit {
+    width: 100%;
+    font-weight: bold;
+    padding: 5px 10px;
+    background: #07f;
+}
+
+
+.auth-subtitle {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.auth-inner {
+    background-color: white;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+
+.auth-block-login {
+    margin-bottom: 15px;
+}
+
+.auth-block-button {
+    margin-top: 30px;
+}
+
+.auth-submit:hover{
+    color: white;
+}
+
+.header {
+    background-color: white;
+}
+
+.header-inner {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-actions-menu {
+    margin-right: 20px;
+}
+
+
+
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.menu-list {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    border: white 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+
+
+.books-table, .notice-table{
+    max-width: 600px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.books-row, .notice-row{
+    margin-left: 60px;
+}
+
+.row div {
+    text-align: center;
+    max-width: 200px;
+    width: 100%;
+    border: 1px black solid;
+    border-bottom: none;
+    padding: 7px 0;
+}
+
+
+.row:last-child div {
+    border-bottom: 1px black solid;
+}
+
+.row:first-child div {
+    font-weight: bold;
+}
+
+.books-row button, .notice-row button {
+    margin-left: 20px;
+}
+
+.select {
+    position: relative;
+    min-width: 200px;
+}
+.select svg {
+    position: absolute;
+    right: 12px;
+    top: calc(50% - 3px);
+    width: 10px;
+    height: 6px;
+    stroke-width: 2px;
+    stroke: #9098a9;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+.select select {
+    -webkit-appearance: none;
+    padding: 7px 40px 7px 12px;
+    width: 100%;
+    border: 1px solid #e8eaed;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px -2px #9098a9;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 150ms ease;
+}
+.select select:required:invalid {
+    color: #5a667f;
+}
+.select select option {
+    color: #223254;
+}
+
+.select select option:hover{
+    background-color: #07f;
+}
+
+.select select option[value=""][disabled] {
+    display: none;
+}
+.select select:focus {
+    outline: none;
+    border-color: #07f;
+    box-shadow: 0 0 0 2px #07f;
+}
+.select select:hover + svg {
+    stroke: #07f;
+}
+.sprites {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.giveBook-select{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.book-button{
+    width: 166px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 0;
+    text-align: center;
+}
+
+.markBook-inner div{
+    margin-bottom: 30px;
+}
+
+.recommendBook-inner{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.recommendBook-inner div{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.recommendBook-title{
+    text-align: center;
+}
+
+.recommendBook-text{
+    outline: none;
+    -moz-appearance: none;
+    border: 1px solid #e8eaed;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px -2px #9098a9;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    resize: none;
+    height: 100px;
+}
+
+.notice-table{
+    max-width: 650px;
+}
+
+.createBook-name{
+    margin-bottom: 20px;
+}
+
+.createBook-title{
+    margin-bottom: 30px;
+}
+.createBook-author{
+    margin-bottom: 40px;
+}
+
+.users-inner{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.users-table{
+    width: 100%;
+}
+
+.users-row div{
+    word-wrap: break-word;
+}
+
+.users-inner button, .users-inner a{
+    margin-left: 10px;
+}
+
+.users-table-title{
+    margin-bottom: 30px;
+}
+
+.createUser-block{
+    max-width: 253px;
+    width: 100%;
+}
+
+.createUser-input{
+    width: 100%;
+}
+
+.createUser-title{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.createUser-item{
+    margin-bottom: 20px;
+}
+
+.createUser-submit{
+    margin-top: 30px;
+    padding: 5px 30px;
+}
+
+
+
+.createUser-item-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.recommendations-row{
+    justify-content: flex-start;
+
+}
+
+.recommendations-table{
+    width: 100%;
+    max-width: 920px;
+    margin-top: 50px;
+}
+
+
+.recommendations-row:not(:first-child) div{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recommendations-table button{
+    margin-left: 30px;
+}
+
+.rates-row{
+    justify-content: center;
+}
+
+
+
+
+
